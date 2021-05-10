@@ -14,6 +14,7 @@ The resulting framework establishes the new state-of-the-arts on major few-shot 
 ## Getting Started
 
 ### Environment
+- CUDA == 10.1
 - PyTorch == 1.4.0 **(Please make sure your pytorch version is 1.4)**
 - torchdiffeq == 0.1.1
 

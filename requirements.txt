@@ -1,0 +1,5 @@
+torch==1.4
+torchvision==0.5
+torchdiffeq==0.1.1
+tqdm
+numpy

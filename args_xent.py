@@ -54,7 +54,6 @@ def argument_parser():
     # Miscs
     # ************************************************************
     parser.add_argument('--save-dir', type=str, default='./weights')
-    parser.add_argument('--resume', type=str, default='', metavar='PATH')
     parser.add_argument('--gpu-devices', default='2', type=str)
 
     # ************************************************************

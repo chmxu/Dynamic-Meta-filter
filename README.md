@@ -9,7 +9,7 @@ Few-shot learning (FSL), which aims to recognise new classes by adapting the lea
 The resulting framework establishes the new state-of-the-arts on major few-shot visual recognition benchmarks, including miniImageNet and tieredImageNet.
 
 ## Performance
-![](figures/result.png)
+![](figures/performance.png)
 
 ## Getting Started
 
@@ -39,13 +39,14 @@ python train_tiered.py --root {data root} --groups {64/160/320/640} --nExemplars
 # test on tieredImageNet
 python test_tiered.py --root {data root} --resume {checkpoint path} --groups {64/160/320/640}  --nExemplars {1/5}
 ```
+The pretrained model weights can be downloaded from [here](https://drive.google.com/drive/folders/1kDVMxXOmR0xJgA2MirMF-PVRd_svA6MP?usp=sharing).
 
 ## Citation
 If you find this project useful for your research, please use the following BibTeX entry.
 ```
 @inproceedings{xu2021dmf,
   title={Learning Dynamic Alignment via Meta-filter for Few-shot Learning},
-  author={Chengming Xu and Cheng Liu and Li Zhang and Chengjie Wang and Jilin Li and Feiyue Huang and Xiangyang Xue and Yanwei Fu},
+  author={Chengming Xu and Chen Liu and Li Zhang and Chengjie Wang and Jilin Li and Feiyue Huang and Xiangyang Xue and Yanwei Fu},
   booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
   year={2021}
 }

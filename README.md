@@ -32,13 +32,13 @@ We use the same data format as [Cross Attention Network](https://github.com/blue
 python train.py --root {data root} --groups {64/160/320/640} --nExemplars {1/5}
 
 # test on miniImageNet
-python test.py --root {data root} --resume {checkpoint path} --groups {64/160/320/640}  --nExemplars {1/5}
+python test.py --root {data root} --resume {checkpoint path} --groups {64/160/320/640}  --nExemplars {1/5} --phase test
 
 # train on tieredImageNet
 python train_tiered.py --root {data root} --groups {64/160/320/640} --nExemplars {1/5}
 
 # test on tieredImageNet
-python test_tiered.py --root {data root} --resume {checkpoint path} --groups {64/160/320/640}  --nExemplars {1/5}
+python test_tiered.py --root {data root} --resume {checkpoint path} --groups {64/160/320/640}  --nExemplars {1/5} --phase test
 ```
 The pretrained model weights can be downloaded from [here](https://drive.google.com/drive/folders/1kDVMxXOmR0xJgA2MirMF-PVRd_svA6MP?usp=sharing).
 

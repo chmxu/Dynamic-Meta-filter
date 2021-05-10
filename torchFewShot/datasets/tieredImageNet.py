@@ -13,7 +13,7 @@ class tieredImageNet(object):
     #dataset_dir = '/home/xuchengming/XCM/Datasets/tieredImageNet-new/tiered_imagenet/'
     #dataset_dir = '/mnt/tmp/tiered_imagenet'
 
-    def __init__(self):
+    def __init__(self, **kwargs):
         super(tieredImageNet, self).__init__()
         self.dataset_dir = kwargs['root']
         self.train_dir = os.path.join(self.dataset_dir, 'train')

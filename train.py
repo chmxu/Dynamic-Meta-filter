@@ -42,7 +42,7 @@ def main():
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu_devices
     use_gpu = torch.cuda.is_available()
 
-    model_name = '{}-{}shot-{}-{}kernel-{}group'.format(args.dataset, args.nExemplars, args.backbone, args.kernel, args.groups)
+    model_name = '{}-{}shot-{}kernel-{}group'.format(args.dataset, args.nExemplars, args.kernel, args.groups)
 
     if args.suffix is not None:
         model_name = model_name + '-{}'.format(args.suffix)

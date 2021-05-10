@@ -36,7 +36,7 @@ class miniImageNet_load(object):
 
     def __init__(self, **kwargs):
         super(miniImageNet_load, self).__init__()
-        self.dataset_dir = root
+        self.dataset_dir = kwargs['root']
         self.train_dir = os.path.join(self.dataset_dir, 'miniImageNet_category_split_train_phase_train.pickle')
         self.val_dir = os.path.join(self.dataset_dir, 'miniImageNet_category_split_val.pickle')
         self.test_dir = os.path.join(self.dataset_dir, 'miniImageNet_category_split_test.pickle')

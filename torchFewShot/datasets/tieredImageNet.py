@@ -15,7 +15,7 @@ class tieredImageNet(object):
 
     def __init__(self):
         super(tieredImageNet, self).__init__()
-        self.dataset_dir = root
+        self.dataset_dir = kwargs['root']
         self.train_dir = os.path.join(self.dataset_dir, 'train')
         self.val_dir = os.path.join(self.dataset_dir, 'val')
         self.test_dir = os.path.join(self.dataset_dir, 'test')

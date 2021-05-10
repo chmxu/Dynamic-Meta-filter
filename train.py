@@ -29,10 +29,9 @@ from torchFewShot.utils.iotools import save_checkpoint, check_isfile
 from torchFewShot.utils.avgmeter import AverageMeter
 from torchFewShot.utils.logger import Logger
 from torchFewShot.utils.torchtools import one_hot, adjust_learning_rate
+from torchFewShot.utils.lr_helper import warmup_scheduler
 
 from tqdm import tqdm
-
-from lr_helper import warmup_scheduler
 
 parser = argument_parser()
 args = parser.parse_args()

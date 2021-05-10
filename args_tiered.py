@@ -8,6 +8,7 @@ def argument_parser():
     # Datasets (general)
     # ************************************************************
     parser.add_argument('-d', '--dataset', type=str, default='tieredImageNet')
+    parser.add_argument('--root', type=str, default='/mnt/tmp/tiered_imagenet')
     parser.add_argument('--load', default=False)
     parser.add_argument('--cifar', default=False)
     parser.add_argument('--suffix', type=str, default=None)
@@ -25,7 +26,7 @@ def argument_parser():
     # ************************************************************
     parser.add_argument('--optim', type=str, default='sgd',
                         help="optimization algorithm (see optimizers.py)")
-    parser.add_argument('--lr', '--learning-rate', default=0.1, type=float,
+    parser.add_argument('--lr', '--learning-rate', default=0.05, type=float,
                         help="initial learning rate")
     parser.add_argument('--weight-decay', default=5e-04, type=float,
                         help="weight decay (default: 5e-04)")
@@ -49,25 +50,13 @@ def argument_parser():
     # Architecture settings
     # ************************************************************
     parser.add_argument('--num_classes', type=int, default=351)
-    parser.add_argument('--scale_cls', type=int, default=1)
     parser.add_argument('--groups', type=int, default=64)
     parser.add_argument('--kernel', type=int, default=1)
-    parser.add_argument('--normalize', type=str, default='sigmoid')
-    parser.add_argument('--mode', type=str, default='deform')
-    parser.add_argument('--dilation', nargs='+', type=int, default=[1])
-    parser.add_argument('--cascade', action='store_true', default=True)
-    parser.add_argument('--ode', action='store_true', default=True)
-    parser.add_argument('--backbone', type=str, default='resnet')
-
-
-
-
 
     # ************************************************************
     # Miscs
     # ************************************************************
     parser.add_argument('--save-dir', type=str, default='/apdcephfs/private_chengmingxu/FS_models')
-    parser.add_argument('--resume', type=str, default='', metavar='PATH')
     parser.add_argument('--gpu-devices', default='0', type=str)
 
     # ************************************************************
@@ -87,9 +76,10 @@ def argument_parser():
     parser.add_argument('--epoch_size', type=int, default=2000,
                         help='number of batches per epoch')
 
-    parser.add_argument('--phase', default='test', type=str,
+    parser.add_argument('--phase', default='val', type=str,
                         help='use test or val dataset to early stop')
     parser.add_argument('--seed', type=int, default=1)
+    parser.add_argument('--resume', type=str, default='./weights/tiered/1shot.pth.tar', metavar='PATH')
 
     return parser
 

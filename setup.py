@@ -45,7 +45,7 @@ def get_extensions():
 
     ext_modules = [
         extension(
-            "maskrcnn_benchmark._C",
+            "dconv._C",
             sources,
             include_dirs=include_dirs,
             define_macros=define_macros,

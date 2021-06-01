@@ -111,67 +111,6 @@ int deform_conv_backward_parameters(
   AT_ERROR("Not implemented on the CPU");
 }
 
-int deform_unfold_forward(
-    at::Tensor input, 
-    at::Tensor offset, 
-    at::Tensor output, 
-    at::Tensor columns, 
-    int kW, 
-    int kH, 
-    int dW, 
-    int dH, 
-    int padW, 
-    int padH, 
-    int dilationW, 
-    int dilationH, 
-    int deformable_group, 
-    int im2col_step)
-{
-  if (input.type().is_cuda()) {
-#ifdef WITH_CUDA
-    return deform_unfold_forward_cuda(
-        input, offset, output, columns,
-        kW, kH, dW, dH, padW, padH, dilationW, dilationH,
-        deformable_group, im2col_step
-    );
-#else
-    AT_ERROR("Not compiled with GPU support");
-#endif
-  }
-  AT_ERROR("Not implemented on the CPU");
-}
-
-int deform_unfold_backward_input(
-    at::Tensor input, 
-    at::Tensor offset, 
-    at::Tensor gradOutput,
-    at::Tensor gradInput, 
-    at::Tensor gradOffset, 
-    at::Tensor columns, 
-    int kW, 
-    int kH, 
-    int dW, 
-    int dH, 
-    int padW, 
-    int padH,
-    int dilationW, 
-    int dilationH, 
-    int deformable_group, 
-    int im2col_step)
-{
-  if (input.type().is_cuda()) {
-#ifdef WITH_CUDA
-    return deform_unfold_backward_input_cuda(
-        input, offset, gradOutput, gradInput, gradOffset, columns,
-        kW, kH, dW, dH, padW, padH, dilationW, dilationH,
-        deformable_group, im2col_step
-    );
-#else
-    AT_ERROR("Not compiled with GPU support");
-#endif
-  }
-  AT_ERROR("Not implemented on the CPU");
-}
 
 
 void modulated_deform_conv_forward(

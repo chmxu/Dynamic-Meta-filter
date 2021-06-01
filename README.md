@@ -21,7 +21,7 @@ The resulting framework establishes the new state-of-the-arts on major few-shot 
 ### Setup
 ```shell script
 pip install -r requirements.txt
-python setup.py install
+python setup.py develop build
 ```
 ### Data Preparation
 We use the same data format as [Cross Attention Network](https://github.com/blue-blue272/fewshot-CAN).
